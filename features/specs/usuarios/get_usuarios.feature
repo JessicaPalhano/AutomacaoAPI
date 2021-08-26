@@ -7,7 +7,7 @@ Funcionalidade: ServeRest Usuários
     Para poder garantir seus status e validações
 
     @listar_usuarios_200
-    Cenário: [GET] Get usuarios 200
+    Cenário: [GET] Listar usuarios 200
         Quando chamar o endpoint "/usuarios" com o método GET sem parâmetros
         Então validar retorno do status code 200
-        E deverá retornar uma lista de usuários
+        E validar retorno de uma lista de usuários

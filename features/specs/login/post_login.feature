@@ -7,7 +7,7 @@ Funcionalidade: ServeRest User
     Para poder garantir seu status e validação
 
     @login_200
-    Esquema do Cenário: [POST] Post Login 
+    Esquema do Cenário: [POST] Realizar login 
         Dado possuir dados de login "<tipo_usuario>"
         Quando chamar o endpoint "/login" com o método POST 
         Então validar retorno do status code <status>

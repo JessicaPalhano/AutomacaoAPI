@@ -7,7 +7,7 @@ Funcionalidade: ServeRest User
     Para poder garantir seus status e validações
 
     @cadastrar_produto
-    Cenário: [POST] Post cadastro 201
+    Cenário: [POST] Cadastrar produto 201
         Dado possuir um token válido
         E possuir um produto válido para cadastrar
         Quando chamar o endpoint "/produtos" com o método POST com o token

@@ -7,7 +7,7 @@ Funcionalidade: ServeRest Usuários
     Para poder garantir seus status e validações
 
     @cadastrar_usuarios_201
-    Cenário: [POST] Post cadastro 201
+    Cenário: [POST] Cadastrar usuario 201
         Dado possuir dados de cadastro válidos
         Quando chamar o endpoint "/usuarios" com o método POST 
         Então validar retorno do status code 201

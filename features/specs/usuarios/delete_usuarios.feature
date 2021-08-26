@@ -7,7 +7,7 @@ Funcionalidade: ServeRest Usuários
     Para poder garantir seus status e validações
 
     @excluir_usuario
-    Esquema do Cenário: [DELETE] Delete excluir por id
+    Esquema do Cenário: [DELETE] Excluir usuario por id
         Dado possuir usuário cadastrado
         Quando chamar o endpoint "/usuarios" com o método DELETE com parâmetros 
         Então validar o retorno da mensagem "<mensagem>"

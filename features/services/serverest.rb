@@ -45,8 +45,8 @@ class ServeRest
     return result
   end
 
-  def armazenar_id(id)
-    self.id = id
+  def delete_com_token(endpoint)
+    Excon.delete(base_uri + endpoint, :headers => {'Authorization' => self.token})
   end
 
   def put_com_id(endpoint)

@@ -7,7 +7,7 @@ Funcionalidade: ServeRest Usuários
     Para poder garantir seus status e validações
 
     @editar_usuarios_200
-    Esquema do Cenário: [PUT] Put editar por id
+    Esquema do Cenário: [PUT] Editar usuario por id
         Dado possuir usuário cadastrado
         Quando chamar o endpoint "/usuarios" com parâmetros id alterando os dados do usuário
         Então validar retorno do status code 200

@@ -9,7 +9,7 @@ end
 Dado ('possuir um token válido') do
   @body = Factory::Static.static_data('login_valido')
   @response = @serverest_api.post("/login", @body)
-  Utils.log_response(@response.body) #imprime a reposta
+  Utils.log_response(@response.body) 
   expect(@response.status).to eq 200
   response_body_json = JSON.parse(@response.body)
   expect(response_body_json["message"]).to eq "Login realizado com sucesso"
@@ -40,8 +40,7 @@ Dado('possuir produto cadastrado') do
   @id = @response_body_json["_id"]
 end
 
-Quando('chamar o endpoint {string} com o método GET com parâmetros') do |endpoint|
-  @response = @serverest_api.get(endpoint + '/' + @id)
-
+Quando('chamar o endpoint {string} com o método DELETE com token e com parâmetros') do |endpoint|
+  @response = @serverest_api.delete_com_token(endpoint + '/' + @id)
 end
 

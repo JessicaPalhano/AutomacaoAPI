@@ -1,6 +1,6 @@
 Então('validar o retorno da mensagem {string}') do |mensagem|
   response_body_json = JSON.parse(@response.body)
-  log(response_body_json["message"])
+  Utils.log_response(@response.body)
   expect(response_body_json["message"]).to eq mensagem
 end
 
@@ -18,8 +18,11 @@ Quando("chamar o endpoint {string} com o método GET sem parâmetros") do |endpo
   Utils.log_response(@response.body)
 end
 
+Quando('chamar o endpoint {string} com o método GET com parâmetros') do |endpoint|
+  @response = @serverest_api.get(endpoint + '/' + @id)
+end
+
 Quando('chamar o endpoint {string} com o método DELETE com parâmetros') do |endpoint|   
   @serverest_api.delete(endpoint)  
   @response = @serverest_api.delete(endpoint + '/' + @id)
- end    
-
+ end  

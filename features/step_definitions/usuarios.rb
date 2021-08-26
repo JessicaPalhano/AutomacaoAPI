@@ -4,7 +4,7 @@ Dado('possuir dados de cadastro válidos') do
   log('E-mail: ' + @body[:email])
 end
 
-Então("deverá retornar uma lista de usuários") do
+Então("validar retorno de uma lista de usuários") do
   response_body_json = JSON.parse(@response.body)
   expect(response_body_json["usuarios"].size).to be > 1
   expect(response_body_json["usuarios"].class).to be_a_kind_of(Array.class)

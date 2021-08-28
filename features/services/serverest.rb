@@ -54,11 +54,5 @@ class ServeRest
       :headers => { 'Content-Type' => 'application/json' },
       :body => body.to_json
     )
-    
   end
-
-
-
 end
-
-

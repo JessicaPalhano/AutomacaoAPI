@@ -34,7 +34,7 @@ class ServeRest
   end
 
   def post_com_token(endpoint,body)
-    result = Excon.post(base_uri + endpoint,
+    Excon.post(base_uri + endpoint,
       :headers => 
       {
          'Content-Type' => 'application/json',
@@ -42,7 +42,6 @@ class ServeRest
       },
       :body => body.to_json
     )
-    return result
   end
 
   def delete_com_token(endpoint)

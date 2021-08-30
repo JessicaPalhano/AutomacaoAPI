@@ -10,12 +10,12 @@ end
 
 Quando("chamar o endpoint {string} com o método POST") do |endpoint|
   @response = @serverest_api.post(endpoint, @body)
-  Utils.log_response(@response.body)
 end
 
-Quando("chamar o endpoint {string} com o método GET sem parâmetros") do |endpoint|
+Quando('chamar o endpoint {string} com o método GET') do |endpoint|
   @response = @serverest_api.get(endpoint)
   Utils.log_response(@response.body)
+  log(@response.status)
 end
 
 Quando('chamar o endpoint {string} com o método GET com parâmetros') do |endpoint|
@@ -26,3 +26,4 @@ Quando('chamar o endpoint {string} com o método DELETE com parâmetros') do |en
   @serverest_api.delete(endpoint)  
   @response = @serverest_api.delete(endpoint + '/' + @id)
  end  
+ 

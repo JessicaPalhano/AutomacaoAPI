@@ -1,5 +1,5 @@
 Dado('possuir dados de cadastro válidos') do
-  @body = Factory::Dynamic.valid_user
+  @body = Factory::Dynamic.usuarios
   log('Nome: ' + @body[:nome])
   log('E-mail: ' + @body[:email])
 end
@@ -11,13 +11,12 @@ Então("validar retorno de uma lista de usuários") do
 end
 
 Dado('possuir usuário cadastrado') do
-  @body= Factory::Dynamic.valid_user
-  log('Nome: ' + @body[:nome])
-  log('E-mail: ' + @body[:email])
-  @response_usuario = @serverest_api.post('/usuarios', @body)
-  Utils.log_response(@response_usuario.body)
-  expect(@response_usuario.status).to eq 201
-  response_body_json = JSON.parse(@response_usuario.body)
+  steps %{
+    Dado possuir dados de cadastro válidos
+    Quando chamar o endpoint "/usuarios" com o método POST 
+    Então validar retorno do status code 201
+  }
+  response_body_json = JSON.parse(@response.body)
   @id = response_body_json["_id"]
 end
 
@@ -30,12 +29,3 @@ Quando('chamar o endpoint {string} com parâmetros id alterando os dados do usu�
   }
   @response = @serverest_api.put(endpoint + '/' + @id, @body_edit)
 end
-
-
-
-
-
-
-
-
-

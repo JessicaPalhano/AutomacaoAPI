@@ -3,7 +3,7 @@ require 'faker'
 module Factory
   class Dynamic
 
-    def self.valid_user
+    def self.usuarios
       {
         nome: Faker::Name.first_name,
         email: Faker::Internet.email,

@@ -1,13 +1,6 @@
 login_valido:
   email: 'teste123@qa.com.br'
   password: 'teste123'
-senha_invalida:
-  email: 'teste123@qa.com.br'
-  password: '1323214312412'
-email_invalido:
+login_invalido:
   email: 'wihiedfdj@ddd.com'
   password: 'teste123'
-
-
-
-     

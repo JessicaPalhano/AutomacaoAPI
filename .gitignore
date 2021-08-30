@@ -1,2 +1,4 @@
-reports/*
+reports/*.html
+reports/*.json
 !.gitignore
+!.gitkeep

@@ -1,0 +1,6 @@
+login_valido:
+  email: 'teste123@qa.com.br'
+  password: 'teste123'
+login_invalido:
+  email: 'wihiedfdj@ddd.com'
+  password: 'teste123'

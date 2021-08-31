@@ -11,5 +11,4 @@ Funcionalidade: ServeRest Produto
         Dado possuir um token válido
         E possuir um produto válido para cadastrar
         Quando chamar o endpoint "/produtos" com o método POST com o token
-        Então validar retorno do status code 201
-        
+        Então validar retorno do status code 201        

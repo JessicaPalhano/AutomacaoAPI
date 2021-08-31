@@ -11,4 +11,4 @@ Funcionalidade: ServeRest Usuários
         Dado possuir usuário cadastrado
         Quando chamar o endpoint "/usuarios" com o método DELETE com parâmetros 
         Então validar o retorno da mensagem "Registro excluído com sucesso"
-        
+    

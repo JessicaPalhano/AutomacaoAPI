@@ -10,5 +10,4 @@ Funcionalidade: ServeRest Usuários
     Cenário: [POST] Cadastrar usuário 201
         Dado possuir dados de cadastro válidos
         Quando chamar o endpoint "/usuarios" com o método POST 
-        Então validar retorno do status code 201
-        
+        Então validar retorno do status code 201     

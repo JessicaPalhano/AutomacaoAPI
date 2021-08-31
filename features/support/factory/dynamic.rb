@@ -14,7 +14,7 @@ module Factory
 
     def self.produto_novo
       {
-        nome: Faker::Book.title,
+        nome: Faker::Book.title + ", pelo autor: " + Faker::Name.name,
         preco: "100",
         descricao: "111",
         quantidade: 381

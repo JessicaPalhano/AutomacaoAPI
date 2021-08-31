@@ -6,9 +6,8 @@ Funcionalidade: ServeRest Produto
     Gostaria de poder chamar os endpoints da API ServeRest
     Para poder garantir seus status e validações
 
-    @excluir_produto
-    Cenário: [DEL] Excluir produto por id
+    @editar_produtos
+    Cenário: [PUT] Editar produtos 200
         Dado possuir produto cadastrado
-        Quando chamar o endpoint "/produtos" com o método DELETE com token e com parâmetros 
+        Quando chamar o endpoint "/produtos" com parâmetros id alterando os dados do produto 
         Então validar retorno do status code 200
-        E validar o retorno da mensagem "Registro excluído com sucesso"    

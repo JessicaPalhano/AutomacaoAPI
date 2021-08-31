@@ -29,6 +29,16 @@ class ServeRest
     )
   end
 
+  def put_com_token(endpoint, body)
+    Excon.put(base_uri + endpoint,
+      :headers => { 
+        'Content-Type' => 'application/json',
+        'Authorization' => self.token 
+      },
+      :body => body.to_json
+    )
+  end
+
   def armazenar_token(token)
     self.token = token
   end
@@ -47,11 +57,5 @@ class ServeRest
   def delete_com_token(endpoint)
     Excon.delete(base_uri + endpoint, :headers => {'Authorization' => self.token})
   end
-
-  def put_com_id(endpoint)
-    Excon.put(base_uri + endpoint + self.id,
-      :headers => { 'Content-Type' => 'application/json' },
-      :body => body.to_json
-    )
-  end
+  
 end

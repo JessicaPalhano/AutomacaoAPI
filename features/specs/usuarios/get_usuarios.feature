@@ -10,5 +10,4 @@ Funcionalidade: ServeRest Usuários
     Cenário: [GET] Listar usuários 200
         Quando chamar o endpoint "/usuarios" com o método GET
         Então validar retorno do status code 200
-        E validar retorno de uma lista de usuários
-        
+        E validar retorno de uma lista de usuários    

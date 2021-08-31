@@ -18,5 +18,4 @@ Funcionalidade: ServeRest Login
         Dado possuir dados de login invalidos
         Quando chamar o endpoint "/login" com o método POST 
         Então validar retorno do status code 401
-        E validar o retorno da mensagem "Email e/ou senha inválidos"
-                     
+        E validar o retorno da mensagem "Email e/ou senha inválidos"               

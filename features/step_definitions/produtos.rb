@@ -34,3 +34,13 @@ end
 Quando('chamar o endpoint {string} com o método DELETE com token e com parâmetros') do |endpoint|
   @response = @serverest_api.delete_com_token(endpoint + '/' + @id)
 end
+
+Quando('chamar o endpoint {string} com parâmetros id alterando os dados do produto') do |endpoint|
+  @body_edit = {
+    nome: Faker::Book.title + ", pelo autor: " + Faker::Name.name,
+    preco: "100",
+    descricao: "111",
+    quantidade: 10
+  }
+  @response = @serverest_api.put_com_token(endpoint + "/" +@id, @body_edit)
+end
